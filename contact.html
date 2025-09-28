@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Food World</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="contact-body">
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>Food World</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="foods.html">Types of Foods</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p class="contact-subtext">We’d love to hear from you! Fill in the form below or reach us on WhatsApp.</p>
+    
+    <form action="#" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="whatsapp">
+      <a href="https://wa.me/254742719135?text=Hello%20Food%20World,%20I%20want%20to%20get%20in%20touch!" target="_blank">
+        💬 Chat with us on WhatsApp
+      </a>
+    </div>
+  </section>
+  <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value
+  };
+
+  const res = await fetch("http://localhost:3000/send-sms", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  const result = await res.json();
+  if(result.success){
+    document.getElementById("status").innerText = "✅ Message sent successfully!";
+  } else {
+    document.getElementById("status").innerText = "❌ Failed to send.";
+  }
+});
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Food World | All rights reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

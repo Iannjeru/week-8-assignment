@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Types of Foods</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav>
+      <h1>Food World</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="types.html" class="active">Types of Foods</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Food Section -->
+  <section class="foods">
+    <h2>Explore Food Categories</h2>
+    <div class="food-grid">
+
+      <!-- Fruits -->
+      <div class="food-card" 
+           data-title="Apple" 
+           data-benefits="Rich in fiber, vitamin C, and antioxidants.">
+        <img src="images/Apple.jpg" alt="Apple">
+        <div class="overlay">
+          <h3>Apple</h3>
+          <p>Sweet and crunchy fruit.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Mango" 
+           data-benefits="High in vitamins A and C, boosts immunity.">
+        <img src="images/mangoes.jpg" alt="Mango">
+        <div class="overlay">
+          <h3>Mango</h3>
+          <p>The king of fruits, tropical and juicy.</p>
+        </div>
+      </div>
+
+      <!-- Vegetables -->
+      <div class="food-card" 
+           data-title="Spinach" 
+           data-benefits="Rich in iron, boosts energy, and supports healthy skin.">
+        <img src="images/spinach.jpg" alt="Spinach">
+        <div class="overlay">
+          <h3>Spinach</h3>
+          <p>Leafy green rich in iron.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Broccoli" 
+           data-benefits="Packed with fiber, vitamins C & K, supports digestion.">
+        <img src="images/broccoli.jpg" alt="Broccoli">
+        <div class="overlay">
+          <h3>Broccoli</h3>
+          <p>Nutritious vegetable, high in fiber.</p>
+        </div>
+      </div>
+
+      <!-- Grains -->
+      <div class="food-card"
+           data-title="Rice" 
+           data-benefits="Provides energy, gluten-free, supports heart health.">
+        <img src="images/parboiled-basmati-rice.jpeg" alt="Rice">
+        <div class="overlay">
+          <h3>Rice</h3>
+          <p>Staple food in many cultures.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Oats" 
+           data-benefits="High in fiber, helps lower cholesterol, supports weight loss.">
+        <img src="images/oats.avif" alt="Oats">
+        <div class="overlay">
+          <h3>Oats</h3>
+          <p>Great for healthy breakfast.</p>
+        </div>
+      </div>
+
+      <!-- Proteins -->
+      <div class="food-card" 
+           data-title="Fish"
+           data-benefits="Rich in omega-3 fatty acids.">
+        <img src="images/fish.jpg" alt="Fish">
+        <div class="food-text">Fish<br>Rich in omega-3 fatty acids.</div>
+        <div class="overlay">
+          <h3>Fish</h3>
+          <p>Rich in omega-3 fatty acids.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Beans" 
+           data-benefits="Excellent plant-based protein source.">
+        <img src="images/beans.jpg" alt="Beans">
+        <div class="overlay">
+          <h3>Beans</h3>
+          <p>Excellent plant-based protein source.</p>
+        </div>
+      </div>
+
+      <!-- Snacks -->
+      <div class="food-card" 
+           data-title="Chips" 
+           data-benefits="Crispy and salty snack.">
+        <img src="images/chips.jpg" alt="Chips">
+        <div class="overlay">
+          <h3>Chips</h3>
+          <p>Crispy and salty snack.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Popcorn"
+           data-benefits="Light snack, perfect for movies.">
+        <img src="images/popcorns.jpg" alt="Popcorn">
+        <div class="overlay">
+          <h3>Popcorn</h3>
+          <p>Light snack, perfect for movies.</p>
+        </div>
+      </div>
+
+      <div class="food-card" 
+           data-title="Carrots" 
+           data-benefits="High in Vitamin A, improves eyesight, strengthens immunity.">
+        <img src="images/carrots.webp" alt="Carrots">
+        <div class="overlay">
+          <h3>Carrots</h3>
+          <p>Crunchy, full of vitamin A.</p>
+        </div>
+      </div>
+    </div> <!-- end .food-grid -->
+  </section>
+
+  <!--  Modal  -->
+  <div id="foodModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="foodTitle"></h2>
+      <p id="foodBenefits"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Food World | All rights reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
